@@ -32,10 +32,10 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path, status: :see_other
   end
-end
 
-private
+  private
 
-def task_params
-  params.require(:task).permit(:title, :details, :completed)
+  def task_params
+    params.require(:task).permit(:title, :details, :completed)
+  end
 end
